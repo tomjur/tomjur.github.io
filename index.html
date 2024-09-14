@@ -6,7 +6,7 @@
 -->
 <html>
 	<head>
-		<title>Story by HTML5 UP</title>
+		<title>Tom Jurgenson</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
@@ -42,7 +42,7 @@
 							</ul>
 
 							<ul class="actions stacked">
-								<li><a href="#first" class="button big wide smooth-scroll-middle">Projects</a></li>
+								<li><a href="#first" class="button big wide smooth-scroll-middle">Publications and Pre-Prints</a></li>
 							</ul>
 						</div>
 						<div class="image">
@@ -51,11 +51,141 @@
 					</section>
 
 				<!-- Two -->
+
 					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
 						<div class="content">
-							<h2>Goal-Conditioned Supervised Learning with Sub-Goal Prediction</h2>
+							<h2>MAMBA: an effective world model approach for meta-reinfocement learning</h2>
+							<h3>ICLR 2024</h3>
+							<h4>Z Rimon*, <b>T Jurgenson*</b>, O Krupnik, G Adler, A Tamar</h4>
 							<p>
-							Recently, a simple yet effective algorithm – goal-conditioned supervised-learning (GCSL) – was proposed to tackle goal-conditioned reinforcement-learning. GCSL is based on the principle of hindsight learning: by observing states visited in previously executed trajectories and treating them as attained goals, GCSL learns the corresponding actions via supervised learning. However, GCSL only learns a goal-conditioned policy, discarding other information in the process. Our insight is that the same hindsight principle can be used to learn to predict goal-conditioned sub-goals from the same trajectory. Based on this idea, we propose Trajectory Iterative Learner (TraIL), an extension of GCSL that further exploits the information in a trajectory, and uses it for learning to predict both actions and sub-goals. We investigate the settings in which TraIL can make better use of the data, and discover that for several popular problem settings, replacing real goals in GCSL with predicted TraIL sub-goals allows the agent to reach a greater set of goal states using the exact same data as GCSL, thereby improving its overall performance.
+							Meta-reinforcement learning (meta-RL) is a promising framework for tackling challenging
+								domains requiring efficient exploration. Existing meta-RL algorithms are characterized
+								by low sample efficiency, and mostly focus on low-dimensional task distributions. In
+								parallel, model-based RL methods have been successful in solving partially observable
+								MDPs, of which meta-RL is a special case. In this work, we leverage this success and
+								propose a new model-based approach to meta- RL, based on elements from existing
+								state-of-the-art model-based and meta-RL methods. We demonstrate the effectiveness of
+								our approach on common meta-RL benchmark domains, attaining greater return with better
+								sample efficiency (up to 15×) while requiring very little hyperparameter tuning. In
+								addition, we validate our approach on a slate of more challenging, higher-dimensional
+								domains, taking a step towards real-world generalizing agents.
+							</p>
+							<ul class="actions fixed">
+								<li><a href="https://arxiv.org/abs/2403.09859" class="button">Paper</a></li>
+								<li><a href="https://github.com/zoharri/mamba" class="button">Code</a></li>
+								<li><a href="https://sites.google.com/view/mamba-iclr2024" class="button">Project Page</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/pandareachermamba.gif" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>RoboArm-NMP: a Learning Environment for Neural Motion Planning</h2>
+							<h4><b>T Jurgenson</b>, M Sudry, G Avineri, A Tamar</h4>
+							<p>
+								We present RoboArm-NMP, a learning and evaluation environment that allows simple and
+								thorough evaluations of Neural Motion Planning (NMP) algorithms, focused on robotic
+								manipulators. Our Python-based environment provides baseline implementations for
+								learning control policies (either supervised or reinforcement learning based), a
+								simulator based on PyBullet, data of solved instances using a classical motion planning
+								solver, various representation learning methods for encoding the obstacles, and a clean
+								interface between the learning and planning frameworks. Using RoboArm-NMP, we compare
+								several prominent NMP design points, and demonstrate that the best methods mostly
+								succeed in generalizing to unseen goals in a scene with fixed obstacles, but have
+								difficulty in generalizing to unseen obstacle configurations, suggesting focus points
+								for future research.
+							</p>
+							<ul class="actions fixed">
+								<li><a href="https://arxiv.org/abs/2405.16335" class="button">Paper</a></li>
+<!--								<li><a href="https://github.com/matansudry/twisted" class="button">Code</a></li>-->
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/robo-arm-nmp.png" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+						<div class="content">
+							<h2>Fine-tuning generative models as an inference method for robotic tasks</h2>
+							<h3>CORL 2023</h3>
+							<h4>O Krupnik, E Shafer, <b>T Jurgenson</b>, A Tamar</h4>
+							<p>
+							Adaptable models could greatly benefit robotic agents operating in the real world, allowing
+								them to deal with novel and varying conditions. While approaches such as Bayesian
+								inference are well-studied frameworks for adapting models to evidence, we build on
+								recent advances in deep generative models which have greatly affected many areas of
+								robotics. Harnessing modern GPU acceleration, we investigate how to quickly adapt the
+								sample generation of neural network models to observations in robotic tasks. We propose
+								a simple and general method that is applicable to various deep generative models and
+								robotic environments. The key idea is to quickly fine-tune the model by fitting it to
+								generated samples matching the observed evidence, using the cross-entropy method. We
+								show that our method can be applied to both autoregressive models and variational
+								autoencoders, and demonstrate its usability in object shape inference from grasping,
+								inverse kinematics calculation, and point cloud completion.
+							</p>
+							<ul class="actions fixed">
+								<li><a href="https://openreview.net/forum?id=yGkqN4hqrJ" class="button">Paper</a></li>
+								<li><a href="https://github.com/orrkrup/mace" class="button">Code</a></li>
+								<li><a href="https://www.orrkrup.com/mace" class="button">Project Page</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/mace.gif" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Hierarchical Planning for Rope Manipulation using Knot Theory and a Learned Inverse Model</h2>
+							<h3>CORL 2023</h3>
+							<h4>M Sudry, <b>T Jurgenson</b>, A Tamar, E Karpas</h4>
+							<p>
+								This work considers planning the manipulation of deformable 1-dimensional objects, such
+								as ropes or cables, specifically to tie knots. We propose TWISTED: Tying With Inverse
+								model and Search in Topological space Excluding Demos, a hierarchical planning approach
+								which, at the high level, uses ideas from knot-theory to plan a sequence of rope
+								configurations, while at the low level uses a neural-network inverse model to move
+								between the configurations in the high-level plan. To train the neural network, we
+								propose a self-supervised approach, where we learn from random movements of the rope.
+								To focus the random movements on interesting configurations, such as knots, we propose
+								a non-uniform sampling method tailored for this domain. In a simulation, we show that
+								our approach can plan significantly faster and more accurately than baselines. We also
+								show that our plans are robust to parameter changes in the physical simulation,
+								suggesting future applications via sim2real.
+							</p>
+							<ul class="actions fixed">
+								<li><a href="https://openreview.net/forum?id=g_PPHV_GkX" class="button">Paper</a></li>
+								<li><a href="https://github.com/matansudry/twisted" class="button">Code</a></li>
+							</ul>
+						</div>
+						<div class="image">
+							<img src="images/twisted_rope.png" alt="" />
+						</div>
+					</section>
+
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+						<div class="content">
+							<h2>Goal-Conditioned Supervised Learning with Sub-Goal Prediction</h2>
+							<h4><b>T Jurgenson</b>, A Tamar</h4>
+							<p>
+							Recently, a simple yet effective algorithm – goal-conditioned supervised-learning (GCSL) –
+								was proposed to tackle goal-conditioned reinforcement-learning. GCSL is based on the
+								principle of hindsight learning: by observing states visited in previously executed
+								trajectories and treating them as attained goals, GCSL learns the corresponding actions
+								via supervised learning. However, GCSL only learns a goal-conditioned policy,
+								discarding other information in the process. Our insight is that the same hindsight
+								principle can be used to learn to predict goal-conditioned sub-goals from the same
+								trajectory. Based on this idea, we propose Trajectory Iterative Learner (TraIL), an
+								extension of GCSL that further exploits the information in a trajectory, and uses it
+								for learning to predict both actions and sub-goals. We investigate the settings in
+								which TraIL can make better use of the data, and discover that for several popular
+								problem settings, replacing real goals in GCSL with predicted TraIL sub-goals allows
+								the agent to reach a greater set of goal states using the exact same data as GCSL,
+								thereby improving its overall performance.
 							</p>
 							<ul class="actions stacked">
 								<li><a href="https://arxiv.org/abs/2305.10171" class="button">Paper</a></li>
@@ -70,6 +200,8 @@
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Sub-Goal Trees – a Framework for Goal-Based Reinforcement Learning</h2>
+							<h3>ICML 2020</h3>
+							<h4><b>T Jurgenson</b>, O Avner, E Groshev, A Tamar</h4>
 							<p>
 								Many AI problems, in robotics and other domains, are goal-based, essentially seeking
 								trajectories leading to various goal states. Reinforcement learning (RL), building on
@@ -99,9 +231,11 @@
 						</div>
 					</section>
 
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Harnessing Reinforcement Learning for Neural Motion Planning</h2>
+							<h3>RSS 2019</h3>
+							<h4><b>T Jurgenson</b>, A Tamar</h4>
 							<p>
 								Motion planning is an essential component in most of today’s robotic applications.
 								In this work, we consider the learning setting, where a set of solved motion planning
@@ -136,6 +270,8 @@
 					<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
 						<div class="content">
 							<h2>Learning Decision Trees with Stochastic Linear Classifiers</h2>
+							<h3>ALT 2018</h3>
+							<h4><b>T Jurgenson</b>, Y Mansour</h4>
 							<p>
 								In this work we propose a top-down decision tree learning algorithm with a class of
 								linear classifiers called stochastic linear classifiers as the internal nodes’
