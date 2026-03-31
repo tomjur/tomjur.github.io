@@ -11,16 +11,15 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMEDZ0M41W"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
+		  gtag('config', 'G-RMEDZ0M41W');
+		</script>
 	</head>
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-RMEDZ0M41W"></script>
-	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
-
-	  gtag('config', 'G-RMEDZ0M41W');
-	</script>
 	<body class="is-preload">
 
 		<!-- Wrapper -->
@@ -31,18 +30,18 @@
 						<div class="content">
 							<h1>Tom Jurgenson</h1>
 							<p class="minor">
-								Hi (: I'm Tom, a robotic and machine learning researcher.
-								I'm interested in advancing the capabilities of reinforcement learning (RL) agents,
-								especially by integrating RL with planning and by incorporating useful priors into RL algorithms.
+								Applied AI researcher with a PhD in Reinforcement Learning from the Technion.
+								Currently a Senior Applied Scientist at Microsoft working on RLHF and post-training
+								methods for Copilot Deep Researcher agents. My research focuses on advancing RL
+								capabilities by integrating it with planning and world models, particularly for
+								robotics and LLM agents.
 							</p>
 							<p class="minor">
-								I recently finished my Ph.D. under the supervision of
-								<a href="https://avivt.github.io/avivt/">Prof. Aviv Tamar</a> at the
-								<a href="https://ece.technion.ac.il/">Electrical and Computer Engineering (ECE) Department</a>
-								in the <a href="https://www.technion.ac.il/en/">Technion, Israel Institute of Technology</a>,
-								and I'm looking for interesting positions and academic collaborations.
+								PhD supervised by <a href="https://avivt.github.io/avivt/">Prof. Aviv Tamar</a>
+								at the <a href="https://ece.technion.ac.il/">Electrical and Computer Engineering Department</a>,
+								<a href="https://www.technion.ac.il/en/">Technion – Israel Institute of Technology</a>.
 							</p>
-							<p class="minor">You can reach me via: tomj at technion dot ac dot il</p>
+							<p class="minor">You can reach me via: tom.jurgenson@gmail.com</p>
 							<ul class="icons">
 								<li><a href="https://github.com/tomjur" class="icon brands style2 fa-github"><span class="label">Github</span></a></li>
 								<li><a href="https://scholar.google.com/citations?user=1YjIvioAAAAJ" class="icon brands style2 fa-google"><span class="label">Google Scholar</span></a></li>
@@ -59,13 +58,121 @@
 						</div>
 					</section>
 
-				<!-- Two -->
+			<!-- Two -->
 
-					<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
-						<div class="content">
-							<h2>MAMBA: an effective world model approach for meta-reinfocement learning</h2>
-							<h3>ICLR 2024</h3>
-							<h4>Z Rimon*, <b>T Jurgenson*</b>, O Krupnik, G Adler, A Tamar</h4>
+				<!-- New Publications -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in" id="first">
+					<div class="content">
+						<h2>VLM-Guided Experience Replay</h2>
+						<h3>Pre-print</h3>
+						<h4>E Sharony, <b>T Jurgenson</b>, O Krupnik, D Di Castro, S Mannor</h4>
+						<p>
+							We propose VLM-RB, a plug-and-play framework that uses frozen Vision-Language Models
+							to prioritize semantically meaningful experiences in reinforcement learning replay buffers.
+							Unlike traditional methods that rely on TD-error, VLM-RB leverages the semantic reasoning
+							capabilities of pre-trained VLMs to identify transitions representing genuine task progress —
+							without any fine-tuning. Across discrete and continuous domains, VLM-RB achieves
+							11–52% higher success rates and 19–45% better sample efficiency compared to uniform
+							and prioritized experience replay baselines.
+						</p>
+						<ul class="actions fixed">
+							<li><a href="https://arxiv.org/abs/2602.01915" class="button">Paper</a></li>
+							<li><a href="https://esharony.me/projects/vlm-rb/" class="button">Project Page</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/vlm_rb_method.svg" alt="" />
+					</div>
+				</section>
+
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>TWISTED-RL: Hierarchical Skilled Agents for Knot-Tying without Human Demonstrations</h2>
+						<h3>ICRA 2026</h3>
+						<h4>G Freund, <b>T Jurgenson</b>, M Sudry, E Karpas</h4>
+						<p>
+							Robotic knot-tying is a fundamental challenge due to complex deformable-object dynamics
+							and strict topological constraints. We present TWISTED-RL, which improves upon the prior
+							state-of-the-art (TWISTED) by replacing its single-step supervised inverse model with a
+							multi-step RL policy conditioned on abstract topological actions rather than goal states.
+							This enables more delicate topological state transitions while avoiding costly data collection,
+							allowing the agent to generalize across diverse knot configurations. TWISTED-RL solves
+							previously unattainable knots of higher complexity, including the Figure-8 and Overhand,
+							and establishes a new state of the art in demonstration-free robotic knot-tying.
+						</p>
+						<ul class="actions fixed">
+							<li><a href="https://arxiv.org/abs/2602.14526" class="button">Paper</a></li>
+							<li><a href="https://github.com/guyfreund/twisted_rl/" class="button">Code</a></li>
+							<li><a href="https://sites.google.com/view/twisted-rl" class="button">Project Page</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<video autoplay loop muted playsinline poster="images/twisted_rl_poster.jpg">
+							<source src="images/twisted_rl_demo.mp4" type="video/mp4" />
+						</video>
+					</div>
+				</section>
+
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Task and Motion Planning Using Infinite Completion Tree and Agnostic Skills</h2>
+						<h3>SoCS 2025</h3>
+						<h4>M Sudry, <b>T Jurgenson</b>, E Karpas</h4>
+						<p>
+							We build upon existing task and motion planning (TAMP) frameworks by integrating
+							pre-trained Sequencing Task-Agnostic Policies (STAP) and Effort Level Search (ELS)
+							to create a hierarchical approach that decouples high-level task decisions from
+							low-level motion execution. The method incorporates a novel success rate estimator
+							that provides more accurate task success predictions than traditional Q-value estimators,
+							and leverages the infinite completion tree structure of ELS to dynamically adjust
+							computational resources based on task complexity. Empirical results demonstrate
+							significant improvements in planning efficiency and execution reliability over
+							traditional methods.
+						</p>
+						<ul class="actions fixed">
+							<li><a href="https://ojs.aaai.org/index.php/SOCS/article/view/35987/38142" class="button">Paper</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<img src="images/socs_ict_method.png" alt="" />
+					</div>
+				</section>
+
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>Train-Once Plan-Anywhere Kinodynamic Motion Planning via Diffusion Trees</h2>
+						<h3>CoRL 2025</h3>
+						<h4>Y Hassidof, <b>T Jurgenson</b>, K Solovey</h4>
+						<p>
+							Kinodynamic motion planning requires computing collision-free trajectories while
+							respecting the robot's dynamic constraints, an essential problem often tackled with
+							sampling-based planners (SBPs). We present Diffusion Tree (DiTree), a
+							provably-generalizable framework that leverages diffusion policies as informed action
+							samplers to efficiently guide state-space search within SBPs. DiTree combines the
+							ability to model complex distributions of expert trajectories with the completeness
+							guarantees of SBPs. Trained on a single environment and evaluated on out-of-distribution
+							scenarios, DiTree achieves a 30% higher success rate on a car robot in simulation and
+							on a real race track, and on MuJoCo's Ant robot where classical SBPs fail entirely.
+						</p>
+						<ul class="actions fixed">
+							<li><a href="https://arxiv.org/abs/2508.21001" class="button">Paper</a></li>
+							<li><a href="https://github.com/MRSTechnion/DiTree" class="button">Code</a></li>
+							<li><a href="https://sites.google.com/view/ditree" class="button">Project Page</a></li>
+						</ul>
+					</div>
+					<div class="image">
+						<video autoplay loop muted playsinline poster="images/ditree_poster.jpg">
+							<source src="images/ditree_demo.mp4" type="video/mp4" />
+						</video>
+					</div>
+				</section>
+
+			<!-- Existing Publications -->
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in">
+					<div class="content">
+						<h2>MAMBA: an effective world model approach for meta-reinforcement learning</h2>
+						<h3>ICLR 2024</h3>
+						<h4>Z Rimon*, <b>T Jurgenson*</b>, O Krupnik, G Adler, A Tamar</h4>
 							<p>
 							Meta-reinforcement learning (meta-RL) is a promising framework for tackling challenging
 								domains requiring efficient exploration. Existing meta-RL algorithms are characterized
