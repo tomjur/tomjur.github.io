@@ -8601,16 +8601,3 @@ input, select, textarea {
 			#wrapper.divided > .invert:first-child {
 				box-shadow: none !important;
 			}
-
-	/* Video in spotlight image panel - same treatment as img */
-	.spotlight .image video {
-		-o-object-fit: cover;
-		object-fit: cover;
-		-o-object-position: center;
-		object-position: center;
-		width: 100%;
-		height: 100%;
-		position: absolute;
-		top: 0;
-		left: 0;
-	}

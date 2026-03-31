@@ -11,13 +11,12 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<style>
-			/* Static figure (e.g. SVG): one full-row background so image column and “bleed” share the same crop */
-			.spotlight.style1.image-bleed.image-bleed-unified {
+			.spotlight.style1.image-bleed-unified {
 				position: relative;
 				isolation: isolate;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-unified::before {
+			.spotlight.style1.image-bleed-unified::before {
 				content: '';
 				position: absolute;
 				inset: 0;
@@ -29,95 +28,79 @@
 				pointer-events: none;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-unified > .content,
-			.spotlight.style1.image-bleed.image-bleed-unified > .image {
+			.spotlight.style1.image-bleed-unified > .content,
+			.spotlight.style1.image-bleed-unified > .image {
 				position: relative;
 				z-index: 1;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-unified .image img {
+			.spotlight.style1.image-bleed-unified .image img {
 				opacity: 0;
 			}
 
-			/* Readable scrim on text column; image column stays clear (shows section bg) */
-			.spotlight.style1.image-bleed.image-bleed-unified.orient-right > .content {
-				background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.96) 50%);
-			}
-
-			.spotlight.style1.image-bleed.image-bleed-unified.orient-left > .content {
-				background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.96) 50%);
-			}
-
-			/*
-			 * Video projects: one video spans the full section (same crop as the “side” panel).
-			 * Text column uses a scrim; .image stays empty so that column shows the same frame.
-			 */
-			.spotlight.style1.image-bleed.image-bleed-video-full {
+			.spotlight.style1.image-bleed-video-full {
 				position: relative;
 				isolation: isolate;
 				overflow: hidden;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full .image-bleed-full-video {
+			.spotlight.style1.image-bleed-video-full .image-bleed-full-video {
 				position: absolute;
 				inset: 0;
 				z-index: 0;
 				pointer-events: none;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full .image-bleed-full-video video {
+			.spotlight.style1.image-bleed-video-full .image-bleed-full-video video {
 				display: block;
 				width: 100%;
 				height: 100%;
 				object-fit: cover;
 				object-position: center;
-				-moz-transition: opacity 0.75s ease-in-out;
-				-webkit-transition: opacity 0.75s ease-in-out;
-				-ms-transition: opacity 0.75s ease-in-out;
 				transition: opacity 0.75s ease-in-out;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full > .content,
-			.spotlight.style1.image-bleed.image-bleed-video-full > .image {
+			.spotlight.style1.image-bleed-video-full > .content,
+			.spotlight.style1.image-bleed-video-full > .image {
 				position: relative;
 				z-index: 1;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full.orient-right > .content {
+			.spotlight.style1.image-bleed-unified.orient-right > .content,
+			.spotlight.style1.image-bleed-video-full.orient-right > .content {
 				background: linear-gradient(to right, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.96) 50%);
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full.orient-left > .content {
+			.spotlight.style1.image-bleed-unified.orient-left > .content,
+			.spotlight.style1.image-bleed-video-full.orient-left > .content {
 				background: linear-gradient(to left, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.96) 50%);
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full.onscroll-image-fade-in.is-inactive .image-bleed-full-video video {
+			.spotlight.style1.image-bleed-video-full.onscroll-image-fade-in.is-inactive .image-bleed-full-video video {
 				opacity: 0;
 			}
 
-			/* Entire video visible inside section (letterboxing OK); use when cover crops too much horizontally */
-			.spotlight.style1.image-bleed.image-bleed-video-full.image-bleed-video-contain .image-bleed-full-video {
+			.spotlight.style1.image-bleed-video-full.image-bleed-video-contain .image-bleed-full-video {
 				background: #ffffff;
 			}
 
-			.spotlight.style1.image-bleed.image-bleed-video-full.image-bleed-video-contain .image-bleed-full-video video {
+			.spotlight.style1.image-bleed-video-full.image-bleed-video-contain .image-bleed-full-video video {
 				object-fit: contain;
 			}
 
 			@media screen and (max-width: 736px) and (orientation: portrait) {
-				.spotlight.style1.image-bleed.image-bleed-unified::before {
+				.spotlight.style1.image-bleed-unified::before {
 					display: none;
 				}
 
-				.spotlight.style1.image-bleed.image-bleed-unified .image img {
+				.spotlight.style1.image-bleed-unified .image img {
 					opacity: 1;
 				}
 
-				.spotlight.style1.image-bleed.image-bleed-unified.orient-right > .content,
-				.spotlight.style1.image-bleed.image-bleed-unified.orient-left > .content {
+				.spotlight.style1.image-bleed-unified.orient-right > .content,
+				.spotlight.style1.image-bleed-unified.orient-left > .content {
 					background: none;
 				}
-
 			}
 		</style>
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
@@ -171,7 +154,7 @@
 			<!-- Two -->
 
 				<!-- New Publications -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in image-bleed image-bleed-unified" id="first" style="--bg-image: url('images/vlm_rb_method.svg')">
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in image-bleed-unified" id="first" style="--bg-image: url('images/vlm_rb_method.svg')">
 					<div class="content">
 						<h2>VLM-Guided Experience Replay</h2>
 						<h3>Pre-print</h3>
@@ -195,7 +178,7 @@
 					</div>
 				</section>
 
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed image-bleed-video-full">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full">
 					<div class="image-bleed-full-video">
 						<video autoplay loop muted playsinline poster="images/twisted_rl_poster.jpg">
 							<source src="images/twisted_rl_demo.mp4" type="video/mp4" />
@@ -249,7 +232,7 @@
 					</div>
 				</section>
 
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed image-bleed-video-full image-bleed-video-contain">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full image-bleed-video-contain">
 					<div class="image-bleed-full-video">
 						<video autoplay loop muted playsinline poster="images/ditree_poster.jpg">
 							<source src="images/ditree_demo.mp4" type="video/mp4" />
