@@ -88,6 +88,41 @@
 				object-fit: contain;
 			}
 
+			/*
+			 * Scaled bleed media (image-bleed-media-scale-75):
+			 * Alignment is automatic — media hugs the side opposite the content
+			 * based on orient-right / orient-left, so no extra class is needed.
+			 */
+			.spotlight.style1.image-bleed-video-full.image-bleed-media-scale-75 .image-bleed-full-video {
+				display: flex;
+				align-items: center;
+			}
+
+			.spotlight.style1.image-bleed-video-full.image-bleed-media-scale-75.orient-right .image-bleed-full-video {
+				justify-content: flex-start;
+			}
+
+			.spotlight.style1.image-bleed-video-full.image-bleed-media-scale-75.orient-left .image-bleed-full-video {
+				justify-content: flex-end;
+			}
+
+			.spotlight.style1.image-bleed-video-full.image-bleed-media-scale-75 .image-bleed-full-video video {
+				width: 75%;
+				height: 75%;
+			}
+
+			.spotlight.style1.image-bleed-unified.image-bleed-media-scale-75::before {
+				transform: scale(0.75);
+			}
+
+			.spotlight.style1.image-bleed-unified.image-bleed-media-scale-75.orient-right::before {
+				transform-origin: left center;
+			}
+
+			.spotlight.style1.image-bleed-unified.image-bleed-media-scale-75.orient-left::before {
+				transform-origin: right center;
+			}
+
 			@media screen and (max-width: 736px) and (orientation: portrait) {
 				.spotlight.style1.image-bleed-unified::before {
 					display: none;
@@ -100,6 +135,10 @@
 				.spotlight.style1.image-bleed-unified.orient-right > .content,
 				.spotlight.style1.image-bleed-unified.orient-left > .content {
 					background: none;
+				}
+
+				.spotlight.style1.image-bleed-unified.image-bleed-media-scale-75 .image img {
+					transform: scale(0.75);
 				}
 			}
 
@@ -160,7 +199,7 @@
 			<!-- Two -->
 
 				<!-- New Publications -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in image-bleed-unified" id="first" style="--bg-image: url('images/vlm_rb_method.svg')">
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in image-bleed-unified image-bleed-media-scale-75" id="first" style="--bg-image: url('images/vlm_rb_method.svg')">
 					<div class="content">
 						<h2>VLM-Guided Experience Replay</h2>
 						<h3>Pre-print</h3>
@@ -184,7 +223,7 @@
 					</div>
 				</section>
 
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full image-bleed-media-scale-75">
 					<div class="image-bleed-full-video">
 						<video autoplay loop muted playsinline poster="images/twisted_rl_poster.jpg">
 							<source src="images/twisted_rl_demo.mp4" type="video/mp4" />
@@ -238,7 +277,7 @@
 					</div>
 				</section>
 
-				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full image-bleed-video-contain">
+				<section class="spotlight style1 orient-left content-align-left image-position-center onscroll-image-fade-in image-bleed-video-full image-bleed-video-contain image-bleed-media-scale-75">
 					<div class="image-bleed-full-video">
 						<video autoplay loop muted playsinline poster="images/ditree_poster.jpg">
 							<source src="images/ditree_demo.mp4" type="video/mp4" />
