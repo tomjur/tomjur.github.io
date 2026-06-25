@@ -165,6 +165,37 @@
 				}
 			}
 
+			/*
+			 * Figure panel (figure-panel):
+			 * Presents a self-contained results figure (chart with legend/axes)
+			 * as a fully-visible image on a white panel beside the text, rather
+			 * than a cropped full-bleed background.
+			 */
+			.spotlight.style1.figure-panel .image {
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				background: #ffffff;
+				padding: 2rem;
+				width: 42%;
+			}
+
+			.spotlight.style1.figure-panel .image img {
+				position: static;
+				width: 100%;
+				height: auto;
+				max-height: 100%;
+				object-fit: contain;
+				opacity: 1;
+			}
+
+			@media screen and (max-width: 736px) and (orientation: portrait) {
+				.spotlight.style1.figure-panel .image {
+					width: 100%;
+					padding: 1.5rem;
+				}
+			}
+
 			.banner.style3 .content > ul.actions.hero-inline-social {
 				align-items: center;
 				flex-wrap: wrap;
@@ -284,7 +315,7 @@
 			<!-- Two -->
 
 				<!-- New Publications -->
-				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in image-bleed-unified image-bleed-media-scale-75" id="first" style="--bg-image: url('images/vlm_rb_method.svg')">
+				<section class="spotlight style1 orient-right content-align-left image-position-center onscroll-image-fade-in figure-panel" id="first">
 					<div class="content">
 						<h2>VLM-Guided Experience Replay</h2>
 						<h3>Pre-print</h3>
@@ -304,7 +335,7 @@
 						</ul>
 					</div>
 					<div class="image">
-						<img src="images/vlm_rb_method.svg" alt="Diagram of the VLM-RB method: a frozen Vision-Language Model prioritizing semantically meaningful experiences in a reinforcement learning replay buffer" loading="lazy" />
+						<img src="images/vlm_rb_success_rate.png" alt="Success rate vs. training step for VLM-RB compared to AER, ERO, and RELO baselines; VLM-RB reaches near-100% success substantially faster than all baselines" loading="lazy" />
 					</div>
 				</section>
 
