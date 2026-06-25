@@ -1,0 +1,33 @@
+# Tom Jurgenson
+
+> Tom Jurgenson is an AI researcher with a PhD in reinforcement learning and robotics from the Technion (advised by Prof. Aviv Tamar), and currently a senior applied scientist at Microsoft working on RLHF and post-training methods for Copilot Deep Researcher agents. His research focuses on advancing reinforcement learning in robotics and LLM post-training by integrating useful priors such as foundation models, planning, demonstrations, and world models.
+
+## About
+
+- Role: Senior Applied Scientist at Microsoft (RLHF and post-training for Copilot Deep Researcher agents).
+- PhD: Reinforcement learning and robotics, Electrical and Computer Engineering Department, Technion – Israel Institute of Technology, advised by Prof. Aviv Tamar.
+- Research interests: reinforcement learning, robotics, RLHF, LLM post-training, motion planning, meta-reinforcement learning, world models, planning.
+- Also mentors students, open to academic collaborations, and consults for startups in robotics and reinforcement learning.
+- Contact: tom.jurgenson@gmail.com
+
+## Links
+
+- Homepage: https://tomjur.github.io/
+- GitHub: https://github.com/tomjur
+- Google Scholar: https://scholar.google.com/citations?user=1YjIvioAAAAJ
+- LinkedIn: https://www.linkedin.com/in/tom-jurgenson-4842833b/
+
+## Publications and Pre-Prints
+
+- VLM-Guided Experience Replay (VLM-RB), pre-print — E Sharony, T Jurgenson, O Krupnik, D Di Castro, S Mannor. A plug-and-play framework using frozen Vision-Language Models to prioritize semantically meaningful experiences in RL replay buffers. Paper: https://arxiv.org/abs/2602.01915 | Project page: https://esharony.me/projects/vlm-rb/
+- TWISTED-RL: Hierarchical Skilled Agents for Knot-Tying without Human Demonstrations, ICRA 2026 — G Freund, T Jurgenson, M Sudry, E Karpas. Multi-step RL policy conditioned on abstract topological actions for demonstration-free robotic knot-tying. Paper: https://arxiv.org/abs/2602.14526 | Code: https://github.com/guyfreund/twisted_rl/ | Project page: https://sites.google.com/view/twisted-rl
+- Task and Motion Planning Using Infinite Completion Tree and Agnostic Skills, SoCS 2025 — M Sudry, T Jurgenson, E Karpas. Hierarchical TAMP integrating STAP and Effort Level Search with a novel success-rate estimator. Paper: https://ojs.aaai.org/index.php/SOCS/article/view/35987/38142
+- Train-Once Plan-Anywhere Kinodynamic Motion Planning via Diffusion Trees (DiTree), CoRL 2025 — Y Hassidof, T Jurgenson, K Solovey. A provably-generalizable framework using diffusion policies as informed action samplers within sampling-based planners. Paper: https://arxiv.org/abs/2508.21001 | Code: https://github.com/MRSTechnion/DiTree | Project page: https://sites.google.com/view/ditree
+- MAMBA: an effective world model approach for meta-reinforcement learning, ICLR 2024 — Z Rimon*, T Jurgenson*, O Krupnik, G Adler, A Tamar. A model-based approach to meta-RL with up to 15x better sample efficiency. Paper: https://arxiv.org/abs/2403.09859 | Code: https://github.com/zoharri/mamba | Project page: https://sites.google.com/view/mamba-iclr2024
+- RoboArm-NMP: a Learning Environment for Neural Motion Planning — T Jurgenson, M Sudry, G Avineri, A Tamar. A learning and evaluation environment for neural motion planning with robotic manipulators. Paper: https://arxiv.org/abs/2405.16335
+- Fine-tuning generative models as an inference method for robotic tasks, CoRL 2023 — O Krupnik, E Shafer, T Jurgenson, A Tamar. Quickly adapting deep generative models to observations in robotic tasks via the cross-entropy method. Paper: https://openreview.net/forum?id=yGkqN4hqrJ | Code: https://github.com/orrkrup/mace | Project page: https://www.orrkrup.com/mace
+- Hierarchical Planning for Rope Manipulation using Knot Theory and a Learned Inverse Model (TWISTED), CoRL 2023 — M Sudry, T Jurgenson, A Tamar, E Karpas. Hierarchical planning combining knot theory with a learned neural-network inverse model. Paper: https://openreview.net/forum?id=g_PPHV_GkX | Code: https://github.com/matansudry/twisted
+- Goal-Conditioned Supervised Learning with Sub-Goal Prediction (TraIL) — T Jurgenson, A Tamar. An extension of GCSL that learns to predict both actions and sub-goals from trajectories. Paper: https://arxiv.org/abs/2305.10171
+- Sub-Goal Trees – a Framework for Goal-Based Reinforcement Learning, ICML 2020 — T Jurgenson, O Avner, E Groshev, A Tamar. An RL framework derived from the all-pairs shortest-path dynamic programming equation, building goal-conditioned trajectories recursively. Paper: http://proceedings.mlr.press/v119/jurgenson20a/jurgenson20a.pdf | Code: https://github.com/tomjur/SGT-PG
+- Harnessing Reinforcement Learning for Neural Motion Planning, RSS 2019 — T Jurgenson, A Tamar. DDPG-MP, an RL algorithm tailored to motion planning that exploits the known model and solved plans. Paper: http://www.roboticsproceedings.org/rss15/p26.pdf | Code: https://github.com/tomjur/ModelBasedDDPG | Video: https://www.youtube.com/watch?v=wHQ4Y4mBRb8
+- Learning Decision Trees with Stochastic Linear Classifiers, ALT 2018 — T Jurgenson, Y Mansour. A top-down decision-tree learning algorithm with stochastic linear classifiers as internal nodes. Paper: http://proceedings.mlr.press/v83/jurgenson18a.html | Code: https://github.com/tomjur/obliqueTree
